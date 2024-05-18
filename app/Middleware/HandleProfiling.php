@@ -7,8 +7,10 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Middleware;
+
+use Closure;
+use PDOException;
 
 use Two\TwoApplication\TwoApplication;
 use Two\Http\Response;
@@ -16,9 +18,6 @@ use Two\Support\Str;
 
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
-
-use Closure;
-use PDOException;
 
 
 class HandleProfiling

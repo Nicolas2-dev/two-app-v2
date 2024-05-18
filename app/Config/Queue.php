@@ -19,7 +19,7 @@ return array(
     | API, vous donnant un accès pratique à chaque back-end en utilisant le même
     | syntaxe pour chacun. Ici, vous pouvez définir le pilote de file d'attente par défaut.
     |
-    | Pris en charge : "sync", "database", "beanstalkd", "sqs", "iron", "redis"
+    | Pris en charge : "sync", "database", "beanstalkd", "sqs", "iron", "redis", "async"
     |
     */
 

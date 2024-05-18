@@ -81,7 +81,7 @@ return array(
      */
     'middleware' => array(
         'Two\TwoApplication\Middleware\Http\CheckForMaintenanceMode',
-        'Two\Routing\Middleware\DispatchAssetFiles',
+        'Two\TwoApplication\Middleware\Routing\DispatchAssetFiles',
     ),
 
     /**
@@ -91,10 +91,10 @@ return array(
         'web' => array(
             'App\Middleware\HandleProfiling',
             'App\Middleware\EncryptCookies',
-            'Two\Cookie\Middleware\AddQueuedCookiesToResponse',
-            'Two\Session\Middleware\StartSession',
-            'Two\Localization\Middleware\SetupLanguage',
-            'Two\View\Middleware\ShareErrorsFromSession',
+            'Two\TwoApplication\Middleware\Cookie\AddQueuedCookiesToResponse',
+            'Two\TwoApplication\Middleware\Session\StartSession',
+            'Two\TwoApplication\Middleware\Localization\SetupLanguage',
+            'Two\TwoApplication\Middleware\View\ShareErrorsFromSession',
             'App\Middleware\VerifyCsrfToken',
             //'App\Middleware\MarkNotificationAsRead',
         ),
@@ -107,9 +107,9 @@ return array(
      * Middleware de route de l'Application.
      */
     'routeMiddleware' => array(
-        'auth'     => 'Two\Auth\Middleware\Authenticate',
+        'auth'     => 'Two\TwoApplication\Middleware\Auth\Authenticate',
         'guest'    => 'App\Middleware\RedirectIfAuthenticated',
-        'throttle' => 'Two\Routing\Middleware\ThrottleRequests',
+        'throttle' => 'Two\TwoApplication\Middleware\Routing\ThrottleRequests',
     ),
 
     /**

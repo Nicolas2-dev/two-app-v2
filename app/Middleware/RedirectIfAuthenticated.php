@@ -7,16 +7,15 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Middleware;
+
+use Closure;
 
 use Two\Http\Request;
 use Two\Support\Facades\Auth;
 use Two\Support\Facades\Config;
 use Two\Support\Facades\Redirect;
 use Two\Support\Facades\Response;
-
-use Closure;
 
 
 class RedirectIfAuthenticated

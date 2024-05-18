@@ -7,10 +7,9 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Middleware;
 
-use Two\Cookie\Middleware\EncryptCookies as BaseEncrypter;
+use Two\TwoApplication\Middleware\Cookie\EncryptCookies as BaseEncrypter;
 
 
 class EncryptCookies extends BaseEncrypter

@@ -38,7 +38,7 @@ return array(
     | les utilisateurs sont en fait extraits de votre base de données ou d'un autre stockage
     | mécanismes utilisés par cette application pour conserver les données de votre utilisateur.
     |
-    | Pris en charge : "session", "jeton"
+    | Pris en charge : "session", "token"
     |
     */
 

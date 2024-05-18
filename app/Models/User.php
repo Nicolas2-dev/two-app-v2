@@ -7,9 +7,7 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Models;
-
 
 use Two\Auth\Traits\UserTrait;
 use Two\Auth\Contracts\UserInterface;

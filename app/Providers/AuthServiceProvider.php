@@ -7,11 +7,9 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Providers;
 
-
-use Two\Auth\Contracts\Access\GateInterface as Gate;
+use Two\Auth\Contracts\Access\GateInterface;
 use Two\TwoApplication\Providers\AuthServiceProvider as ServiceProvider;
 
 
@@ -33,7 +31,7 @@ class AuthServiceProvider extends ServiceProvider
      * @param  GateInterface  $gate
      * @return void
      */
-    public function boot(Gate $gate)
+    public function boot(GateInterface $gate)
     {
         $this->registerPolicies($gate);
 

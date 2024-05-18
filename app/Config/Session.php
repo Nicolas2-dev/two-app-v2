@@ -9,20 +9,40 @@
  */
 
 return array(
-    'driver' => 'file',  // Le pilote de session utilisé pour stocker les données de session ; pris en charge : 'fichier', 'base de données' ou 'cookie'.
 
-    // La configuration du pilote de session de base de données.
-    'table'      => 'sessions', // La table de base de données hébergeant les données de session.
-    'connection' => null,       // Le nom de connexion à la base de données utilisé par le pilote.
+    // Le pilote de session utilisé pour stocker les données de session.
+    // pris en charge : 'fichier', 'base de données' ou 'cookie'.
+    'driver' => 'file',  
 
-    // Durée de vie de la session.
-    'lifetime'      => 180,     // Nombre de minutes pendant lesquelles la session est autorisée à rester inactive avant son expiration.
-    'expireOnClose' => false,   // Si vous voulez qu'ils expirent immédiatement à la fermeture du navigateur, définissez-le.
+    /**
+     * La configuration du pilote de session de base de données.
+     */
 
-    // La configuration du pilote de session de fichiers.
-    'files'    => STORAGE_PATH .'framework' .DS .'sessions', // File Session Handler - où les fichiers de session peuvent être stockés.
+    // La table de base de données hébergeant les données de session.
+    'table'      => 'sessions', 
+    
+    // Le nom de connexion à la base de données utilisé par le pilote.
+    'connection' => null,       
+ 
+    /**
+     * Durée de vie de la session.
+     */
 
-    'lottery' => array(2, 100), // Option utilisée par le Garbage Collector, pour supprimer les fichiers de session bloqués.
+    // Nombre de minutes pendant lesquelles la session est autorisée à rester inactive avant son expiration.
+    'lifetime'      => 180,  
+
+    // Si vous voulez qu'ils expirent immédiatement à la fermeture du navigateur, définissez-le.
+    'expireOnClose' => false,   
+
+    /**
+     * La configuration du pilote de session de fichiers.
+     */
+
+    // File Session Handler - où les fichiers de session peuvent être stockés.
+    'files'    => STORAGE_PATH .'framework' .DS .'sessions', 
+
+    // Option utilisée par le Garbage Collector, pour supprimer les fichiers de session bloqués.
+    'lottery' => array(2, 100), 
 
     // Configuration des cookies.
     'cookie'  => PREFIX .'session',

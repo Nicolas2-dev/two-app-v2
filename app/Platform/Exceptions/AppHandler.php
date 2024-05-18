@@ -7,9 +7,7 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Platform\Exceptions;
-
 
 use Exception;
 
@@ -19,7 +17,7 @@ use Two\Support\Facades\Config;
 use Two\Support\Facades\Redirect;
 use Two\Support\Facades\Response;
 use Two\Exceptions\TwoHandlerExecption;
-use Two\Session\TokenMismatchException;
+use Two\Session\Execption\TokenMismatchException;
 use Two\Exceptions\Exception\FlattenException;
 use Two\Auth\Exception\AuthenticationException;
 

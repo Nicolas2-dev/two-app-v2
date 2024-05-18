@@ -7,7 +7,6 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Middleware;
 
 use Two\TwoApplication\Middleware\Http\VerifyCsrfToken as BaseVerifier;

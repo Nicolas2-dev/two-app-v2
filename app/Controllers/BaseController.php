@@ -7,14 +7,12 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Controllers;
 
+use BadMethodCallException;
 
 use Two\Support\Str;
-
 use Two\Http\Request;
-use BadMethodCallException;
 use Two\Support\Facades\View;
 use Two\Support\Facades\Config;
 use Two\Support\Facades\Language;

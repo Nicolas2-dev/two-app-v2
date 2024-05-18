@@ -18,7 +18,7 @@ return array(
     | à l'aide de la bibliothèque de mise en cache. Bien entendu, vous pouvez utiliser d'autres pilotes
     | le temps que vous souhaitez. C'est la valeur par défaut lorsqu'un autre n'est pas spécifié.
     |
-    | Pris en charge : "file", "database", "apc", "memcached", "redis", "tableau"
+    | Pris en charge : "file", "database", "apc", "memcached", "redis", "array"
     */
 
     'driver' => 'file',

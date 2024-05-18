@@ -7,10 +7,8 @@
  * @version 1.0.0
  * @date    15 Fevrier 2023
  */
-
 namespace App\Database\Seeds;
 
-use Two\Database\ORM\Model;
 use Two\Database\Seeder;
 use Two\Support\Facades\Hash;
 use Two\Support\Str;
