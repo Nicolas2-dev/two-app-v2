@@ -71,7 +71,7 @@ return array(
     | sources qui représentent chaque modèle / table. Ces sources peuvent alors
     | être affecté à tous les gardes d'authentification supplémentaires que vous avez définis.
     |
-    | Pris en charge : "base de données", "étendue"
+    | Pris en charge : "database", "extended"
     |
     */
 
