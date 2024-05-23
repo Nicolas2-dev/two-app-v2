@@ -9,7 +9,7 @@
  */
 namespace App\Providers;
 
-use Two\TwoApplication\Providers\ServiceProvider as ServiceProvider;
+use Two\Application\Providers\ServiceProvider as ServiceProvider;
 use Two\Support\Facades\Schema;
 
 

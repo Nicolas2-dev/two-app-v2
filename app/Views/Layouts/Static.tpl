@@ -15,7 +15,7 @@
 @section('footer')
 <footer class="footer">
     <div class="container-fluid">
-        <div class="row" style="margin: 15px 0 0;">
+        <div class="row" style="margin: 15px 35px 0;">
             <div class="col-lg-5">
                 <p class="text-muted">Copyright &copy; {{ date('Y') }} <a href="http://www.Twoframework.fr/" target="_blank"><b>Two Framework {{ VERSION }} / Kernel {{ App::version() }}</b></a></p>
             </div>
@@ -28,3 +28,5 @@
     </div>
 </footer>
 @stop
+
+<!-- DO NOT DELETE! - Profiler -->

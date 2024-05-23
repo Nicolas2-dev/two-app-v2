@@ -10,7 +10,7 @@
 namespace App\Providers;
 
 use Two\Events\Dispatcher;
-use Two\TwoApplication\Providers\EventServiceProvider as ServiceProvider;
+use Two\Application\Providers\EventServiceProvider as ServiceProvider;
 
 
 class EventServiceProvider extends ServiceProvider

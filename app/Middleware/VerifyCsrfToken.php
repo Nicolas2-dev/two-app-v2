@@ -9,7 +9,7 @@
  */
 namespace App\Middleware;
 
-use Two\TwoApplication\Middleware\Http\VerifyCsrfToken as BaseVerifier;
+use Two\Application\Middleware\Http\VerifyCsrfToken as BaseVerifier;
 
 
 class VerifyCsrfToken extends BaseVerifier

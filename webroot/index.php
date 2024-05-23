@@ -8,7 +8,7 @@
  * @date    15 Fevrier 2023
  */
 
-defined('DS') || define('DS', DIRECTORY_SEPARATOR);
+ defined('DS') || define('DS', DIRECTORY_SEPARATOR);
 
 //--------------------------------------------------------------------------
 // Définir les chemins absolus pour les répertoires d'application

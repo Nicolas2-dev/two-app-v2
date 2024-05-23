@@ -39,7 +39,7 @@ class RedirectIfAuthenticated
         }
 
         // L'Utilisateur est authentifié.
-        else if ($request->ajax() || $request->wantsJson() || $request->is('api/*')) {
+        elseif ($request->ajax() || $request->wantsJson() || $request->is('api/*')) {
             return Response::make('Unauthorized Access', 401);
         }
 

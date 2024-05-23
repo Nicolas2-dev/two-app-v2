@@ -16,10 +16,10 @@ use Two\Support\Facades\View;
 use Two\Support\Facades\Config;
 use Two\Support\Facades\Redirect;
 use Two\Support\Facades\Response;
-use Two\Exceptions\TwoHandlerExecption;
-use Two\Session\Execption\TokenMismatchException;
+use Two\Exceptions\TwoHandlerException;
 use Two\Exceptions\Exception\FlattenException;
 use Two\Auth\Exception\AuthenticationException;
+use Two\Session\Exception\TokenMismatchException;
 
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
@@ -29,7 +29,7 @@ use Whoops\Handler\PrettyPageHandler as WhoopsPrettyPageHandler;
 use Whoops\Handler\JsonResponseHandler as WhoopsJsonResponseHandler;
 
 
-class AppHandler extends TwoHandlerExecption
+class AppHandler extends TwoHandlerException
 {
     /**
      * Une liste des types d'exception qui ne doivent pas être signalés.
@@ -38,9 +38,9 @@ class AppHandler extends TwoHandlerExecption
      */
     protected $dontReport = array(
         'Two\Auth\Exception\AuthenticationException',
-        'Two\Database\ORM\ModelNotFoundException',
-        'Two\Session\TokenMismatchException',
-        'Two\Validation\ValidationException',
+        'Two\Database\Exception\ModelNotFoundException',
+        'Two\Session\Exception\TokenMismatchException',
+        'Two\Validation\Exception\ValidationException',
         'Symfony\Component\HttpKernel\Exception\HttpException',
     );
 
@@ -215,6 +215,9 @@ class AppHandler extends TwoHandlerExecption
 
         // Nous allons utiliser la première garde.
         $guard = array_shift($guards);
+
+        //dump($guard); die();
+
 
         $uri = Config::get("auth.guards.{$guard}.paths.authorize", 'login');
 

@@ -25,8 +25,8 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'hostname'  => 'localhost',
-            'database'  => 'new_two_npds',
-            'username'  => 'root',
+            'database'  => '',
+            'username'  => '',
             'password'  => '',
             'prefix'    => PREFIX,
             'charset'   => 'utf8mb4',

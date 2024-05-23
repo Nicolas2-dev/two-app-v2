@@ -21,7 +21,7 @@ return array(
     */
 
     'defaults' => array(
-        'guard'    => 'web',
+        'guard'    => 'user',
         'reminder' => 'users',
     ),
 
@@ -43,7 +43,7 @@ return array(
     */
 
     'guards' => array(
-        'web' => array(
+        'user' => array(
             'driver'   => 'session',
             'provider' => 'users',
 
@@ -55,6 +55,15 @@ return array(
         'api' => array(
             'driver'   => 'token',
             'provider' => 'users',
+        ),
+        'admin' => array(
+            'driver'   => 'session',
+            'provider' => 'admins',
+
+            'paths' => array(
+                'authorize' => 'admin/login',
+                'dashboard' => 'admin/dashboard',
+            ),
         ),
     ),
 
@@ -78,8 +87,12 @@ return array(
     'providers' => array(
         'users' => array(
             'driver' => 'extended',
-            'model'  => 'App\Models\User',
+            'model'  => 'Modules\TwoUsers\Models\User',
         ),
+        'admins' => array(
+            'driver' => 'extended',
+            'model'  => 'Modules\TwoAuthors\Models\Author',
+        ), 
     ),
 
     /*

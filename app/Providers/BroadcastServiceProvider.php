@@ -12,7 +12,7 @@ namespace App\Providers;
 use Two\Http\Request;
 use Two\Routing\Router;
 use Two\Support\Facades\Broadcast;
-use Two\TwoApplication\Providers\ServiceProvider;
+use Two\Application\Providers\ServiceProvider;
 
 
 class BroadcastServiceProvider extends ServiceProvider

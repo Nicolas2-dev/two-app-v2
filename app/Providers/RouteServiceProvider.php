@@ -10,7 +10,7 @@
 namespace App\Providers;
 
 use Two\Routing\Router;
-use Two\TwoApplication\Providers\RouteServiceProvider as ServiceProvider;
+use Two\Application\Providers\RouteServiceProvider as ServiceProvider;
 
 
 class RouteServiceProvider extends ServiceProvider

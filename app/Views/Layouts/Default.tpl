@@ -51,5 +51,7 @@ echo Asset::position('header', 'css');
 
 @endphp
 
+<!-- DO NOT DELETE! - Profiler -->
+
 </body>
 </html>

@@ -9,7 +9,7 @@
  */
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
+use Modules\TwoCore\Core\BaseController;
 
 use Two\Support\Facades\View;
 use Two\Support\Str;
@@ -67,8 +67,7 @@ class Pages extends BaseController
             str_replace(array('-', '_'), ' ', $subPage ?: ($page ?: 'Home'))
         );
 
-
-       // toto();
+        //toto();
         
         return View::make($view)->shares('title', $title);
     }

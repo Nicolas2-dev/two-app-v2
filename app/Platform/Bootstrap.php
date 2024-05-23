@@ -8,13 +8,13 @@
  * @date    15 Fevrier 2023
  */
 
-use Two\TwoApplication\TwoApplication;
+use Two\Http\Request;
+use Two\Application\Two;
+use Two\Application\Loader\AliasLoader;
+use Two\Support\Facades\Facade;
+
 use Two\Environment\EnvironmentVariables;
 use Two\Config\Repository as ConfigRepository;
-use Two\TwoApplication\Loader\AliasLoader;
-use Two\Support\Facades\Facade;
-use Two\Http\Request;
-
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 
@@ -50,7 +50,7 @@ if (function_exists('mb_internal_encoding')) {
 
 require APPPATH .'Config.php';
 
-$app = new TwoApplication();
+$app = new Two();
 
 //--------------------------------------------------------------------------
 // Détecter l'environnement d'application.
@@ -90,6 +90,7 @@ $app->instance('app', $app);
 
 $app->singleton(
     'Two\Exceptions\Contracts\HandlerInterface', 'App\Platform\Exceptions\AppHandler'
+    //'Two\Foundation\Exceptions\HandlerInterface', 'App\Platform\Exceptions\Handler'
 );
 
 //--------------------------------------------------------------------------
@@ -129,9 +130,9 @@ $app->instance('config', $config = new ConfigRepository(
 
 $app->startExceptionHandling();
 
-//if ($env !== 'testing') {
+if ($env !== 'testing') {
     ini_set('display_errors', 'On');
-//}
+}
 
 //--------------------------------------------------------------------------
 // Enregistrez le middleware d'application.

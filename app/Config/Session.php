@@ -11,7 +11,7 @@
 return array(
 
     // Le pilote de session utilisé pour stocker les données de session.
-    // pris en charge : 'fichier', 'base de données' ou 'cookie'.
+    // pris en charge : 'file', 'database' ou 'cookie'.
     'driver' => 'file',  
 
     /**

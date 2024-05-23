@@ -9,8 +9,8 @@
  */
 namespace App\Providers;
 
-use Two\Auth\Contracts\Access\GateInterface;
-use Two\TwoApplication\Providers\AuthServiceProvider as ServiceProvider;
+use Two\Auth\Contracts\GateInterface;
+use Two\Application\Providers\AuthServiceProvider as ServiceProvider;
 
 
 class AuthServiceProvider extends ServiceProvider

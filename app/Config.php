@@ -26,3 +26,10 @@ define('STORAGE_PATH', BASEPATH .'storage' .DS);
  * PRÉFÉREZ être utilisé dans les appels de base de données ou le stockage des données de session, la valeur par défaut est 'Two_'
  */
 define('PREFIX', 'Two_');
+
+/**
+ * Setup the Config API Mode.
+ *
+ * For using the 'database' mode, you need a database having the table 'nova_options'
+ */
+//define('CONFIG_STORE', 'database'); // Supported: "files", "database"

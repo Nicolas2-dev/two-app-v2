@@ -20,3 +20,16 @@ use Two\Support\Facades\Forge;
 Forge::resolveCommands(array(
     //'App\Console\Commands\testCommande',
 ));
+
+/**
+ * Add the Closure based commands.
+ */
+Forge::command('app:install', function ()
+{
+    $this->call('db:migrate', array('--seed' => true));
+
+    //
+    $this->call('package:migrate');
+    $this->call('package:seed');
+
+})->describe('Run all database migrations and seed it with records');

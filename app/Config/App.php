@@ -23,7 +23,7 @@ return array(
     /**
      * L'URL du site Web.
      */
-    'url' => 'http://www.Two.dev/',
+    'url' => 'http://localhost:8000/',
 
     /**
     * L'adresse e-mail de l'administrateur.
@@ -43,7 +43,7 @@ return array(
     /**
      * Le nom du thème par défaut ou false pour désactiver l'utilisation des thèmes.
      */
-    'theme' => false,
+    'theme' => 'TwoBoost',
 
     /**
      * La locale par défaut qui sera utilisée par la traduction.
@@ -59,7 +59,7 @@ return array(
     /**
      * La clé de cryptage.
      */
-    'key' => 'SomeRandomStringThere_1234567890',
+    'key' => 'KSHKvXqVsrnfs5BpUZjUdDbLPTjjDoD3',
 
     /*
     |--------------------------------------------------------------- -------------------------
@@ -80,21 +80,22 @@ return array(
      * La pile middleware de l'application.
      */
     'middleware' => array(
-        'Two\TwoApplication\Middleware\Http\CheckForMaintenanceMode',
-        'Two\TwoApplication\Middleware\Routing\DispatchAssetFiles',
+        'Two\Application\Middleware\Http\CheckForMaintenanceMode',
+        'Two\Application\Middleware\Routing\DispatchAssetFiles',
     ),
 
     /**
      * Les groupes de middleware de route de l'application.
      */
     'middlewareGroups' => array(
-        'web' => array(
+        'web' => array(            
+            'Shared\Forensics\Middleware\HandleProfiling',
             'App\Middleware\HandleProfiling',
             'App\Middleware\EncryptCookies',
-            'Two\TwoApplication\Middleware\Cookie\AddQueuedCookiesToResponse',
-            'Two\TwoApplication\Middleware\Session\StartSession',
-            'Two\TwoApplication\Middleware\Localization\SetupLanguage',
-            'Two\TwoApplication\Middleware\View\ShareErrorsFromSession',
+            'Two\Application\Middleware\Cookie\AddQueuedCookiesToResponse',
+            'Two\Application\Middleware\Sessions\StartSession',
+            'Two\Application\Middleware\Localization\SetupLanguage',
+            'Two\Application\Middleware\View\ShareErrorsFromSession',
             'App\Middleware\VerifyCsrfToken',
             //'App\Middleware\MarkNotificationAsRead',
         ),
@@ -107,9 +108,9 @@ return array(
      * Middleware de route de l'Application.
      */
     'routeMiddleware' => array(
-        'auth'     => 'Two\TwoApplication\Middleware\Auth\Authenticate',
+        'auth'     => 'Two\Application\Middleware\Auth\Authenticate',
         'guest'    => 'App\Middleware\RedirectIfAuthenticated',
-        'throttle' => 'Two\TwoApplication\Middleware\Routing\ThrottleRequests',
+        'throttle' => 'Two\Application\Middleware\Routing\ThrottleRequests',
     ),
 
     /**
@@ -210,6 +211,10 @@ return array(
         'Template'      => 'Two\Support\Facades\Template',
         'View'          => 'Two\Support\Facades\View',
         'Package'       => 'Two\Support\Facades\Package',
+
+        // The Forensics Console.
+        'Console'       => 'Shared\Forensics\Console',
+
     ),
 
 );

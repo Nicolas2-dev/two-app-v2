@@ -13,10 +13,10 @@ return array(
     /**
      *  
      */
-    'useForensics' => false,
+    'useForensics' => true,
 
     /**
      *  
      */
-    'withDatabase' => false,
+    'withDatabase' => true,
 );
