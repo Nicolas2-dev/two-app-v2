@@ -90,7 +90,6 @@ $app->instance('app', $app);
 
 $app->singleton(
     'Two\Exceptions\Contracts\HandlerInterface', 'App\Platform\Exceptions\AppHandler'
-    //'Two\Foundation\Exceptions\HandlerInterface', 'App\Platform\Exceptions\Handler'
 );
 
 //--------------------------------------------------------------------------
