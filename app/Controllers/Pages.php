@@ -9,7 +9,7 @@
  */
 namespace App\Controllers;
 
-use Modules\TwoCore\Core\BaseController;
+use App\Controllers\BaseController;
 
 use Two\Support\Facades\View;
 use Two\Support\Str;
