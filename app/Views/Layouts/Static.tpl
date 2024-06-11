@@ -17,7 +17,7 @@
     <div class="container-fluid">
         <div class="row" style="margin: 15px 35px 0;">
             <div class="col-lg-5">
-                <p class="text-muted">Copyright &copy; {{ date('Y') }} <a href="http://www.Twoframework.fr/" target="_blank"><b>Two Framework {{ VERSION }} / Kernel {{ App::version() }}</b></a></p>
+                <p class="text-muted">Copyright &copy; {{ date('Y') }} <a href="http://www.twoframework.fr/" target="_blank"><b>Two Framework {{ VERSION }} / Kernel {{ App::version() }}</b></a></p>
             </div>
             <div class="col-lg-7">
                 <p class="text-muted pull-right">

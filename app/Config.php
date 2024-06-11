@@ -32,4 +32,4 @@ define('PREFIX', 'Two_');
  *
  * For using the 'database' mode, you need a database having the table 'nova_options'
  */
-//define('CONFIG_STORE', 'database'); // Supported: "files", "database"
+define('CONFIG_STORE', 'files'); // Supported: "files", "database"

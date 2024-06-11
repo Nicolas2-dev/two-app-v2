@@ -11,28 +11,57 @@ use PDOException;
 
 class Option extends BaseModel
 {
+    /**
+     * 
+     */
     protected $table = 'options';
 
+    /**
+     * 
+     */
     protected $primaryKey = 'id';
 
+    /**
+     * 
+     */    
     protected $fillable = array('namespace', 'group', 'item', 'value');
 
+    /**
+     * 
+     */    
     public $timestamps = false;
 
-    //
+    /**
+     * 
+     */
     protected static $itemResolver;
 
 
+    /**
+     * 
+     *
+     * @return
+     */
     public function getValueAttribute($value)
     {
         return $this->maybeDecode($value);
     }
 
+    /**
+     * 
+     *
+     * @return
+     */
     public function setValueAttribute($value)
     {
         $this->attributes['value'] = $this->maybeEncode($value);
     }
 
+    /**
+     * 
+     *
+     * @return
+     */
     public function getConfigKey()
     {
         if (! empty($namespace = $this->getAttribute('namespace'))) {
@@ -48,6 +77,11 @@ class Option extends BaseModel
         return $key;
     }
 
+    /**
+     * 
+     *
+     * @return
+     */
     public static function all($columns = array('*'))
     {
         try {
@@ -60,6 +94,11 @@ class Option extends BaseModel
         return with(new static())->newCollection();
     }
 
+        /**
+     * 
+     *
+     * @return
+     */
     public static function set($key, $value)
     {
         list ($namespace, $group, $item) = static::getItemResolver()->parseKey($key);
@@ -69,6 +108,11 @@ class Option extends BaseModel
         );
     }
 
+    /**
+     * 
+     *
+     * @return
+     */
     protected static function getItemResolver()
     {
         if (isset(static::$itemResolver)) {
