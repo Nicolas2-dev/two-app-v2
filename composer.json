@@ -1,5 +1,5 @@
 {
-    "name": "nicolas2-dev/two-app",
+    "name": "nicolas2-dev/two-app-v2",
     "type": "project",
     "description": "Two appication",
     "license": "mit",
@@ -18,13 +18,13 @@
         },
         {
             "type": "git",
-            "url": "https://github.com/nicolas2dev/two-framework"
+            "url": "https://github.com/Nicolas2-dev/two-framework-v2"
         }
     ],
     "require": {
         "php": "^8.1",
         "nicolas2dev/two-installer": "*",
-        "nicolas2dev/two-framework": "*"
+        "nicolas2dev/two-framework-v2": "*"
     },
     "autoload": {
         "psr-4": {
