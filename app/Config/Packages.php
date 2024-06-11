@@ -81,22 +81,6 @@ return array(
     */
 
     'options' => array(
-        
-        // Modules
-        'two_core' => array(
-            'enabled'  => true,
-            'order'    => 20,
-        ),
-
-        // Themes
-        'two_backend' => array(
-            'enabled'  => true,
-            'order'    => 200,
-        ),
-        'two_boost' => array(
-            'enabled'  => true,
-            'order'    => 30,
-        ),
     ),
 
 );
