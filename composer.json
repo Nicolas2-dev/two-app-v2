@@ -14,7 +14,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/nicolas2dev/two-installer"
+            "url": "https://github.com/nicolas2-dev/two-installer-v2"
         },
         {
             "type": "git",
@@ -23,7 +23,7 @@
     ],
     "require": {
         "php": "^8.2.1",
-        "nicolas2dev/two-installer": "*",
+        "nicolas2-dev/two-installer-v2": "*",
         "nicolas2-dev/two-framework-v2": "*"
     },
     "autoload": {
