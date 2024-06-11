@@ -18,11 +18,11 @@
         },
         {
             "type": "git",
-            "url": "https://github.com/nicolas2-dev/two-framework-v2"
+            "url": "https://github.com/Nicolas2-dev/two-framework-v2"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.2.1",
         "nicolas2dev/two-installer": "*",
         "nicolas2dev/two-framework-v2": "*"
     },
